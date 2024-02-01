@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #3498db; 
+            padding: 15px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 16px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        #navbar a:hover {
+            color: orangered;
+        }
+
+        section {
+            height: 800px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<section id="home">
+    <h2>Home</h2>
+
+</section>
+
+<section id="about">
+    <h2>About</h2>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+</section>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = '#e74c3c'; 
+        } else {
+            navbar.style.backgroundColor = '#3498db'; 
+        }
+    });
+</script>
+
+</body>
+</html>
